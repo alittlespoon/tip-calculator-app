@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <img src="images/logo.svg" alt="" id="logo">
+        <div id="card">
+            <section id="card__input">
+                <div class="input-wrapper">
+                    <label for="bill-amount" class="section-header">Bill</label>
+                    <input type="number" class="bill-amount" placeholder="0.00">
+                </div>
+                <div class="tip-input-wrapper">
+                    <p class="section-header">Select Tip %</p>
+                    <div class="tip-btn-wrapper">
+                        <button class="tip-btn" data-tip-amount="5">5%</button>
+                        <button class="tip-btn" data-tip-amount="10">10%</button>
+                        <button class="tip-btn" data-tip-amount="15">15%</button>
+                        <button class="tip-btn" data-tip-amount="20">20%</button>
+                        <button class="tip-btn" data-tip-amount="25">25%</button>
+                        <input type="text" class="custom-tip" placeholder="Custom">
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label for="total-pax" class="section-header">Number of People</label>
+                    <span class="input-message">Can't be zero</span>
+                    <input type="number" class="total-pax" placeholder="0">
+                </div>
+            </section>
+            <section id="card__display">
+                <div class="display-results">
+                    <div class="display-result-row">
+                        <div class="result-info">
+                            <p class="info-title">Tip <span class="tip-percentage"></span></p>
+                        </div>
+                        <p class="total-tip result-amount" data-default-text="$0.00">$0.00</p>
+                    </div>
+                    <div class="display-result-row">
+                        <div class="result-info">
+                            <p class="info-title">Total Bill</p>
+                        </div>
+                        <p class="total-bill result-amount" data-default-text="$0.00">$0.00</p>
+                    </div>
+                    <hr>
+                    <div class="display-result-row">
+                        <div class="result-info">
+                            <p class="section-header">Tip Amount</p>
+                            <p class="info-subtitle">/ person</p>
+                        </div>
+                        <p class="calculated-tip result-amount" data-default-text="$0.00">$0.00</p>
+                    </div>
+                    <div class="display-result-row">
+                        <div class="result-info">
+                            <p class="section-header">Total</p>
+                            <p class="info-subtitle">/ person</p>
+                        </div>
+                        <p class="calculated-total result-amount" data-default-text="$0.00">$0.00</p>
+                    </div>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="submit-btn">Submit</button>
+                    <button class="reset-btn">Reset</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
